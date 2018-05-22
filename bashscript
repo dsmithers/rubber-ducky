@@ -1,0 +1,37 @@
+#!/bin/bash
+let endnumber=582
+let previous
+cd ..
+cd Desktop
+        COUNTER=0
+        while [  $COUNTER -lt 10000000000000000 ]; do
+           ls
+            let COUNTER=COUNTER+1
+            let rando=$RANDOM
+            sleep .3s
+           for i in $( ls ); do
+           ls
+           endnumber=endnumber + 2
+           echo item: $i
+           cd $i
+           previous = $i
+           ls
+
+
+done
+if [ $previous -eq $i]; then
+               cd ..
+           fi
+if [ $rando -eq $endnumber ]; then
+           printf "\033c"
+   echo "ACCESS GRANTED";
+   exit;
+fi
+cd ..
+
+
+
+
+
+        done
+}

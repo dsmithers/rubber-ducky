@@ -1,0 +1,25 @@
+GUI TAB
+DELAY 100
+GUI SPACE
+DELAY 100
+STRING Terminal
+DELAY 1000
+ENTER
+DELAY 100
+STRING let endnumber=582
+ENTER
+DELAY 100
+STRING let previous
+ENTER
+DELAY 100
+STRING cd
+ENTER
+DELAY 100
+STRING cd Documents
+ENTER
+DELAY 100
+STRING COUNTER=0
+ENTER
+DELAY 100
+STRING          while [  $COUNTER -lt 10000000000000000 ]; do            ls;             let COUNTER=COUNTER+1;             let rando=$RANDOM;             sleep .3s;            for i in $( ls ); do            ls;            endnumber=endnumber + 2;            echo item: $i;            cd $i;            previous = $i;            ls;  done; if [ $previous -eq $i]; then                cd ..;            fi; if [ $rando -eq $endnumber ]; then            printf "\033c";    echo "ACCESS GRANTED";    exit; fi; cd ..;          done
+ENTER
