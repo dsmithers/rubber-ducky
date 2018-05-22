@@ -5,3 +5,4 @@
 '''
 java -jar duckencoder.jar -i [file name] -o /Volumes/NONAME/inject.bin
 '''
+Now go find a target!
