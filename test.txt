@@ -15,47 +15,12 @@ DELAY 100
 STRING let previous=blah
 ENTER
 DELAY 100
-STRING cd ~
+STRING cd
 ENTER
 DELAY 100
 STRING COUNTER=0
 ENTER
 DELAY 100
-STRING while [  $COUNTER -lt 10000000000000000 ]; do
-   ls
-   let COUNTER=COUNTER+1
-   echo “while”
-   sleep .3s
-   N=42
-   a=( * )
-   randf=()
-
-       ((j=RANDOM%${#a[@]}))
-
-       randf+=( “${a[j]}” )
-       echo rand: $randf
-       cd $randf
-       echo previous: $previous
-       ls
-
-       if [[ $previous = $randf ]]
-       then
-                   cd ..
-                   cd ..
-                   echo “going back”
-       fi
-       previous=$randf
-       echo previousChanged: $previous
-       let rando=$RANDOM
-       echo $rando
-       echo $endnumber
-       if [[ $rando = $endnumber ]]
-       then
-           printf “\033c”
-           echo “ACCESS GRANTED”;
-           exit;
-       fi
-done
-}
+STRING while [  $COUNTER -lt 10000000000000000 ]; do ls;    let COUNTER=COUNTER+1;    echo “while”;    sleep .3s;    N=42;    a=( * );    randf=();         ((j=RANDOM%${#a[@]}));         randf+=( “${a[j]}” );        echo rand: $randf;        cd $randf;        echo previous: $previous;        ls;         if [[ $previous = $randf ]];        then                    cd ..;                    cd ..;                    echo “going back”;        fi;        previous=$randf;        echo previousChanged: $previous;        let rando=$RANDOM;        echo $rando;        echo $endnumber;        if [[ $rando = $endnumber ]];        then            printf “\033c”;            echo “ACCESS GRANTED”;            exit;        fi; done
 DELAY 100
 ENTER
